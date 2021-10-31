@@ -1,0 +1,31 @@
+<p>demo works!</p>
+<input type="text" [(ngModel)]="title"> <span>{{ title }}</span>
+<br>
+<button (click)="addItem()">add</button>
+
+<div *ngIf=" title.toLowerCase() === 'tonatiuj' " >
+  El titulo es igual a {{ 'tonatiuj' | titlecase }};
+</div>
+
+<div [ngSwitch]="title">
+<p *ngSwitchCase="'tonatiuj'">
+  Este es tonatiuj
+</p>
+<p *ngSwitchCase="'brandon'">
+  Este es brandon
+</p>
+<p *ngSwitchCase="'santiago'">
+  Este es santiago
+</p>
+<p *ngSwitchDefault>
+  no hay Math
+</p>
+</div>
+
+<ul>
+  <li *ngIf="nombres.length === 0">La lista esta vacia</li>
+  <li *ngFor="let item of nombres; let idx = index">
+    {{ idx }}-{{ item }}
+    <button (click)="removeItem(idx)">remove</button>
+  </li>
+</ul>

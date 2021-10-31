@@ -1,0 +1,8 @@
+<h3 appHighlight bg="#FF7D22" color="#FFFFFF">{{ product.title | uppercase }}</h3>
+<figure>
+    <img [src]="product.image" [alt]="product.title">
+</figure>
+<strong>{{ product.price | exponential | currency }}</strong>
+<p>{{ product.description | slice:0:5}}</p>
+<p>{{ today | date: 'EEEE, M/d/yy, h:mm a' }}</p>
+<button (click)="addCarrito()">Agregar al carrito</button>
