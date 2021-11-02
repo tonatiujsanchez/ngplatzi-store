@@ -1,0 +1,12 @@
+<article>
+    <figure>
+        <img [src]="product.image" [alt]="product.title" width="700px">
+    </figure>
+    <div class="detalles">
+        <ul>
+            <li>Nombre: {{ product.title }}</li>
+            <li>Precio: {{ product.price }}</li>
+        </ul>
+        <p>{{ product.description }}</p>
+    </div>
+</article>

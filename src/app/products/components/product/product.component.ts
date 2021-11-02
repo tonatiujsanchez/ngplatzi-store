@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnDestroy, DoCheck, OnInit, Output, SimpleChange } from "@angular/core";
-import { Product } from '../product.model';
+import { Product } from '../../../product.model';
 
 
 @Component({
